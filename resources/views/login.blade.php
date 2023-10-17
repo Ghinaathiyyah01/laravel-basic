@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Halaman Login</title>
     <style>
@@ -20,7 +21,7 @@
         text-align: center;
     }
 
-    header{
+    header {
         background-color: #B31312;
         border-radius: 5px;
         padding: 5px;
@@ -63,12 +64,14 @@
         background-color: #B31312;
         color: #fff;
     }
-
     </style>
 </head>
+
 <body>
     <div class="container">
-        <header><h2>Login</h2></header>
+        <header>
+            <h2>Login</h2>
+        </header>
         <form action="proses_login.php" method="POST">
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -82,4 +85,5 @@
         </form>
     </div>
 </body>
+
 </html>
