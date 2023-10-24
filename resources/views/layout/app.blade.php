@@ -68,7 +68,7 @@
     <div class="sidebar">
         <a href="#"><i class="fa fa-home"></i>Beranda</a>
         <a href="/barang"><i class="fa fa-database"></i>Barang</a>
-        <a href="#"><i class="fa fa-cogs"></i>Layanan</a>
+        <a href="/kategori"><i class="fa fa-cogs"></i>Kategori</a>
         <a href="#"><i class="fa fa-envelope"></i>Kontak</a>
     </div>
     <!-- Sidebar dengan tautan menu -->

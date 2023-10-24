@@ -12,6 +12,10 @@ class Barang extends Model
     // Daftar atribut yang dikecualikan dari pengisian massal (mass-assignment).
     // Atribut yang ada dalam $guarded tidak akan diisi secara otomatis.
     protected $guarded = ['_token', 'submit'];
+    
+    public function Kategori(){
+        return $this->belongsTo('App\Models\Kategori','kategori_id','id');
+    }
 }
 
 // Model di atas adalah representasi dari entitas "Barang" dalam aplikasi Laravel.

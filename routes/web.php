@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\KategoriController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,3 +36,10 @@ Route::put('/barang/{id}', [BarangController::class, 'update']);
 
 Route::get('/barang/{id}/hapus', [BarangController::class, 'hapus']);
 // Rute ini menangani permintaan HTTP GET ke URL seperti '/barang/{id}/hapus', di mana '{id}' adalah segmen placeholder untuk nilai dinamis. Rute ini mengarahkan permintaan ke metode 'hapus' di kelas 'BarangController'. Kata "hapus" menunjukkan bahwa ini mungkin digunakan untuk menghapus sumber daya tertentu.
+
+Route::get('/kategori', [KategoriController::class, 'index']);
+Route::get('/kategori/create', [KategoriController::class, 'create']);
+Route::post('/kategori/store', [KategoriController::class, 'store']);
+Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit']);
+Route::put('/kategori/{id}', [KategoriController::class, 'update']);
+Route::get('/kategori/{id}/hapus', [KategoriController::class, 'hapus']);

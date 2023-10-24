@@ -18,6 +18,19 @@
         </div>
 
         <div class="form-group row">
+            <label for="nama" class="col-sm-2 col-form-label">Kategori</label>
+            <!-- Label untuk input kategori barang -->
+            <div class="col-sm-10">
+                <select name="kategori_id" id="kategori_id">
+                @foreach ($kategori as $kategori)
+                    <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }}</option>
+                @endforeach
+                </select>
+            </div>
+            <!-- Dropdown/select untuk memilih kategori barang dari daftar kategori yang ada -->
+        </div>
+
+        <div class="form-group row">
             <label for="harga" class="col-sm-2 col-form-label">Harga</label>
             <!-- Label untuk input harga barang -->
             <div class="col-sm-10">
@@ -25,5 +38,17 @@
             </div>
             <!-- Input teks untuk memasukkan harga barang -->
         </div>
+
+        <div class="form-group row">
+            <label for "jumlah" class="col-sm-2 col-form-label">Jumlah</label>
+            <!-- Label untuk input jumlah barang -->
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="jumlah" placeholder="Jumlah" name="jumlah" >
+            </div>
+            <!-- Input teks untuk mengisi jumlah barang -->
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <!-- Tombol untuk mengirimkan data barang yang baru dimasukkan -->
     </form>
 </div>

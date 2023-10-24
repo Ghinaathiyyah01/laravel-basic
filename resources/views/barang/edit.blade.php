@@ -17,17 +17,30 @@
             <!-- Label untuk input nama barang -->
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="nama" placeholder="Nama Barang" name="nama" value="{{ $barang->nama }}">
+                <!-- Input teks untuk memasukkan nama barang, dengan nilai yang sudah ada (nilai awal) -->
             </div>
-            <!-- Input teks untuk mengedit nama barang -->
+        </div>
+
+        <div class="form-group row">
+            <label for="nama" class="col-sm-2 col-form-label">Kategori</label>
+            <!-- Label untuk input kategori barang -->
+            <div class="col-sm-10">
+                <select name="kategori_id" id="kategori_id">
+                @foreach ($kategori as $kategori)
+                <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }}</option>
+                @endforeach
+                </select>
+                <!-- Dropdown/select untuk memilih kategori barang dari daftar kategori yang ada -->
+            </div>
         </div>
 
         <div class="form-group row">
             <label for "harga" class="col-sm-2 col-form-label">Harga</label>
             <!-- Label untuk input harga barang -->
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="harga" placeholder="Harga" name="harga" value="{{ $barang->harga }}">
+                <input type="text" class="form-control" id="harga" placeholder="Harga" name="harga" value=" Rp. {{ $barang->harga }}">
+                <!-- Input teks untuk mengedit harga barang, dengan nilai yang sudah ada (nilai awal) -->
             </div>
-            <!-- Input teks untuk mengedit harga barang -->
         </div>
         
         <div class="form-group row">
@@ -35,8 +48,8 @@
             <!-- Label untuk input jumlah barang -->
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="jumlah" placeholder="Jumlah" name="jumlah" value="{{ $barang->jumlah }}">
+                <!-- Input teks untuk mengedit jumlah barang, dengan nilai yang sudah ada (nilai awal) -->
             </div>
-            <!-- Input teks untuk mengedit jumlah barang -->
         </div>
         
         <button type="submit" class="btn btn-primary">Submit</button>

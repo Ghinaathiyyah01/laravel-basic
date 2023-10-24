@@ -6,10 +6,12 @@
   <!-- Header untuk halaman data barang -->
   <a href="/barang/create">Tambah Data</a>
   <!-- Tautan untuk menambah data barang -->
+
   <table class="table table-bordered">
     <thead>
       <tr>
         <th scope="col">No</th>
+        <th scope="col">Kategori</th>
         <th scope="col">Nama</th>
         <th scope="col">Harga</th>
         <th scope="col">Jumlah</th>
@@ -17,15 +19,18 @@
       </tr>
     </thead>
     <!-- Baris judul tabel -->
+
     <tbody>
       @foreach($barang as $no => $brg)
         <!-- Mengulangi data barang -->
         <tr>
           <th>{{ $no + 1 }}</th>
           <!-- Nomor urut -->
+          <td>{{ $brg->nama_kategori }}</td>
+          <!-- Nama kategori barang -->
           <td>{{ $brg->nama }}</td>
           <!-- Nama barang -->
-          <td>{{ $brg->harga }}</td>
+          <td>Rp. {{ $brg->harga }}</td>
           <!-- Harga barang -->
           <td>{{ $brg->jumlah }}</td>
           <!-- Jumlah barang -->
